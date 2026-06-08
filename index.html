@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Vida Pífia de Gabriel Guidi</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161f30;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-color: #ff4757; /* Vermelho Furacão / Sem Filtro */
+            --gold-color: #ffa502;   /* Para o status esbelto/inteligente */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1.5rem 1rem;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 63, 87, 0.3);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Grid de Atributos */
+        .grid-perfil {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .atributo {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .atributo.destaque {
+            border-left-color: var(--gold-color);
+        }
+
+        .atributo-titulo {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .atributo-valor {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Lista de Hobbies */
+        .lista-hobbies li {
+            background: rgba(255, 255, 255, 0.02);
+            margin-bottom: 10px;
+            padding: 1rem;
+            border-radius: 8px;
+            list-style: none;
+        }
+
+        /* Botão Sem Filtro */
+        .btn-filtro {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-filtro:hover {
+            background-color: #ff6b81;
+        }
+
+        .btn-filtro:active {
+            transform: scale(0.98);
+        }
+
+        #painel-psico {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background: rgba(255, 63, 87, 0.1);
+            border: 1px dashed var(--accent-color);
+            border-radius: 8px;
+            min-height: 50px;
+            display: none;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gabriel Guidi</h1>
+        <p>"Inteligente, esbelto e absolutamente sem filtro."</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Seção: Ficha Técnica -->
+        <section class="card">
+            <h2>📋 Ficha Técnica (Dossiê)</h2>
+            <div class="grid-perfil">
+                <div class="atributo">
+                    <div class="atributo-titulo">Idade</div>
+                    <div class="atributo-valor">26 anos</div>
+                </div>
+                <div class="atributo">
+                    <div class="atributo-titulo">Identidade</div>
+                    <div class="atributo-valor">Não Cisgênero</div>
+                </div>
+                <div class="atributo destaque">
+                    <div class="atributo-titulo">Visual & Shape</div>
+                    <div class="atributo-valor">Esbelto & Pouco Cabelo</div>
+                </div>
+                <div class="atributo destaque">
+                    <div class="atributo-titulo">Intelecto</div>
+                    <div class="atributo-valor">QI Acima da Média</div>
+                </div>
+                <div class="atributo">
+                    <div class="atributo-titulo">Profissão Oficial</div>
+                    <div class="atributo-valor">Marketing (Mktg)</div>
+                </div>
+                <div class="atributo">
+                    <div class="atributo-titulo">Segunda Identidade</div>
+                    <div class="atributo-valor">Psicólogo de Plantão 🧠</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Hobbies -->
+        <section class="card">
+            <h2>⚽ Hobbies & Obsessões</h2>
+            <div class="lista-hobbies">
+                <li><strong>Jogar Bola:</strong> Ostentando sua silhueta esbelta em campo (correndo atrás do prejuízo).</li>
+                <li><strong>Admirar e Adestrar o CAP:</strong> Torcedor do Athletico Paranaense com direito a diploma honorário de adestrador de Furacão.</li>
+                <li><strong>Jogar Frescobol:</strong> A dinâmica perfeita na praia para falar mal da vida alheia sem perder o ritmo do jogo.</li>
+            </div>
+        </section>
+
+        <!-- Seção: Máquina -->
+        <section class="card">
+            <h2>🚗 Estilo nas Pistas</h2>
+            <p>O bom gosto automotivo se resume a um único e inseparável companheiro de estradas:</p>
+            <div style="background: rgba(255,255,255,0.05); padding: 1.2rem; border-radius: 8px; text-align: center; font-size: 1.3rem; border-left: 4px solid var(--gold-color);">
+                <strong>⚡ Volkswagen Polo ⚡</strong>
+            </div>
+        </section>
+
+        <!-- Seção Interativa -->
+        <section class="card">
+            <h2>💬 Modo "Safado & Sem Filtro"</h2>
+            <p>Gabriel ativou o modo psicólogo corporativo. Clique abaixo para ouvir uma análise nua, crua e cirúrgica.</p>
+            <button class="btn-filtro" id="btn-diagnostico">Ativar Consultório do Guidi</button>
+            <div id="painel-psico"></div>
+        </section>
+
+    </div>
+
+    <footer>
+        Biografia Pífia de Gabriel Guidi © 2026. Todos os direitos reservados à calvície precoce.
+    </footer>
+
+    <script>
+        // Pérolas misturando o lado Mktg, Psico e Sem Filtro
+        const verdadesDoGabriel = [
+            "\"Seu problema não é trauma de infância, é falta de vergonha na cara mesmo. Próximo!\"",
+            "\"Analisando suas métricas de comportamento, meu diagnóstico psico é claro: você é safado igual a mim, só não assume.\"",
+            "\"Muito inteligente e esbelto para aguentar esse textão que você me mandou. Resumo isso aí em dois tópicos de marketing.\"",
+            "\"Se até o CAP eu adestro e aguento o sofrimento, você acha mesmo que o seu drama vai me comover?\"",
+            "\"Gosto do meu Polo igual gosto das minhas verdades: rápido, direto e sem filtro para não perder tempo.\"",
+            "\"Menos cabelo significa menos atrito aerodinâmico para fugir de gente chata. É pura física evolutiva.\""
+        ];
+
+        const botao = document.getElementById('btn-diagnostico');
+        const painel = document.getElementById('painel-psico');
+
+        botao.addEventListener('click', () => {
+            const indiceAleatorio = Math.floor(Math.random() * verdadesDoGabriel.length);
+            painel.innerHTML = verdadesDoGabriel[indiceAleatorio];
+            painel.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
